@@ -1,0 +1,1233 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta name="theme-color" content="#0B1F3B" />
+  <title>مجمع دوحة المبرّات التربوي الرعائي | Doha Al-Mabarrat Educational & Care Complex</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    :root{
+      --navy:#0B1F3B;
+      --navy2:#071A2F;
+      --gold:#C8A24A;
+      --white:#FFFFFF;
+      --ink:#0d1420;
+      --muted:#6b7280;
+      --bg:#F5F7FA;
+      --card:rgba(255,255,255,.86);
+      --line:rgba(200,162,74,.35);
+      --shadow: 0 18px 50px rgba(11,31,59,.18);
+      --radius: 18px;
+      --max: 1120px;
+      --font-ar: "IBM Plex Sans Arabic","Cairo","Noto Kufi Arabic","Tahoma","Arial",sans-serif;
+      --font-en: "IBM Plex Sans","Montserrat","Noto Sans","Segoe UI","Arial",sans-serif;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      color:var(--ink);
+      background:
+        radial-gradient(900px 380px at 20% 0%, rgba(200,162,74,.14), transparent 60%),
+        radial-gradient(900px 380px at 90% 10%, rgba(11,31,59,.14), transparent 55%),
+        linear-gradient(180deg, #ffffff, var(--bg));
+      font-family: var(--font-ar);
+      overflow-x: hidden;
+    }
+
+    a{color:inherit;text-decoration:none}
+    .container{max-width:var(--max);margin:0 auto;padding:15px 12px 60px; width:100%}
+
+    /* تحسينات للأجهزة المحمولة */
+    @media (max-width: 768px) {
+      .container{padding:10px 10px 40px}
+      body{font-size: 15px}
+    }
+
+    @media (max-width: 480px) {
+      .container{padding:8px 8px 30px}
+      body{font-size: 14px}
+    }
+
+    .topbar{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(10px);
+      background: rgba(255,255,255,.85);
+      border-bottom: 1px solid rgba(11,31,59,.08);
+    }
+	
+	.center-half-img {
+  width: 50%;
+  height: auto;
+  margin:  auto;          /* 🔥 هذا هو التوسيط الحقيقي */
+}
+
+
+    .topbar .inner{
+      max-width:var(--max); margin:0 auto; padding:12px 15px;
+      display:flex; align-items:center; justify-content:space-between; gap:10px;
+      flex-wrap: wrap;
+    }
+
+    /* تحسين الشريط العلوي للجوال */
+    @media (max-width: 768px) {
+      .topbar .inner{
+        padding:10px 12px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+      }
+      
+      .brand, .lang {
+        min-width: auto;
+        width: 100%;
+        justify-content: center;
+      }
+      
+      .brand {
+        order: 1;
+        justify-content: flex-start;
+      }
+      
+      .nav {
+        order: 2;
+        width: 100%;
+        justify-content: center;
+        margin: 5px 0;
+      }
+      
+      .lang {
+        order: 3;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .topbar .inner{
+        padding:8px 10px;
+      }
+    }
+
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      min-width: 260px;
+    }
+    .brand img{
+      width:40px;height:40px;object-fit:contain;
+      filter: drop-shadow(0 6px 18px rgba(11,31,59,.25));
+    }
+    .brand .t1{
+      font-weight:900;
+      color:var(--navy);
+      line-height:1.2;
+      font-size:14px;
+    }
+    .brand .t2{
+      font-size:12px; color:var(--muted); margin-top:2px;
+      font-family: var(--font-en);
+      direction:ltr;
+    }
+
+    /* تحسين العلامة التجارية للجوال */
+    @media (max-width: 768px) {
+      .brand img{width:36px;height:36px}
+      .brand .t1{font-size:13px}
+      .brand .t2{font-size:11px}
+    }
+
+    .nav{
+      display:flex; gap:8px; align-items:center; flex-wrap:wrap;
+      justify-content:center;
+    }
+    .nav a{
+      padding:8px 10px; border-radius:999px;
+      border:1px solid rgba(11,31,59,.10);
+      background: rgba(255,255,255,.55);
+      font-size:13px;
+      font-weight:800;
+      white-space: nowrap;
+    }
+    .nav a:hover{
+      border-color: rgba(200,162,74,.55);
+      box-shadow:0 8px 22px rgba(11,31,59,.08)
+    }
+
+    /* تحسين التنقل للجوال */
+    @media (max-width: 768px) {
+      .nav{gap:6px}
+      .nav a{
+        padding:6px 8px;
+        font-size:12px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .nav{
+        justify-content: space-around;
+        width: 100%;
+      }
+      .nav a{
+        padding:6px 8px;
+        font-size:11px;
+        flex: 1;
+        text-align: center;
+        min-width: 80px;
+      }
+    }
+
+    .lang{
+      display:flex; align-items:center; gap:10px;
+      justify-content:flex-end;
+      min-width: 260px;
+    }
+    .toggle{
+      display:flex; padding:4px; border-radius:999px;
+      border:1px solid rgba(11,31,59,.12);
+      background: rgba(255,255,255,.60);
+      box-shadow: 0 10px 30px rgba(11,31,59,.08);
+    }
+    .toggle button{
+      border:0; background:transparent; cursor:pointer;
+      padding:8px 12px; border-radius:999px;
+      font-weight:900;
+      color:var(--navy);
+      font-family: var(--font-en);
+      letter-spacing:.3px;
+      font-size: 14px;
+    }
+    .toggle button.active{
+      background: linear-gradient(135deg, var(--navy), var(--navy2));
+      color:var(--white);
+      box-shadow: 0 12px 26px rgba(11,31,59,.22);
+    }
+
+    /* تحسين تبديل اللغة للجوال */
+    @media (max-width: 768px) {
+      .toggle button{padding:6px 10px; font-size:13px}
+    }
+
+    .hero{
+      margin-top:10px;
+      display:grid; gap:10px;
+      grid-template-columns: 1.25fr 2fr;
+      align-items:stretch;
+    }
+    
+    /* تحسينات هيرو للجوال */
+    @media (max-width: 980px){
+      .hero{grid-template-columns:1fr}
+      .brand,.lang{min-width:auto}
+    }
+
+    .card{
+      background: var(--card);
+      border: 1px solid rgba(11,31,59,.10);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
+    }
+    .card::before{
+      content:"";
+      position:absolute; inset:0;
+      background-image:
+        linear-gradient(135deg, rgba(200,162,74,.14), transparent 55%),
+        repeating-linear-gradient(45deg, rgba(11,31,59,.06) 0 1px, transparent 1px 18px);
+      opacity:.22;
+      pointer-events:none;
+    }
+    .card .pad{position:relative; padding:22px}
+
+    /* تحسين البطاقة للجوال */
+    @media (max-width: 768px) {
+      .card .pad{padding:18px}
+      .card{border-radius: 16px}
+    }
+
+    @media (max-width: 480px) {
+      .card .pad{padding:15px}
+      .card{border-radius: 14px}
+    }
+
+    .kicker{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:6px 10px; border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.55);
+      font-weight:900; color:var(--navy);
+      font-size:12px;
+    }
+    .kicker .dot{width:6px;height:6px;border-radius:99px;background:var(--gold)}
+
+    h1{
+      margin:12px 0 6px;
+      font-size: 28px;
+      line-height:1.3;
+      color: var(--navy);
+      letter-spacing:.1px;
+      font-weight: 900;
+    }
+
+    /* تحسين العناوين للجوال */
+    @media (max-width: 768px) {
+      h1{font-size: 24px; margin:10px 0 5px}
+      .kicker{font-size:11px; padding:5px 8px}
+    }
+
+    @media (max-width: 480px) {
+      h1{font-size: 20px}
+      .kicker{font-size:10px}
+    }
+
+    p.lead{
+      margin:0;
+      font-size:15px;
+      color: rgba(13,20,32,.80);
+      line-height:1.7;
+    }
+
+    /* تحسين النصوص للجوال */
+    @media (max-width: 768px) {
+      p.lead{font-size:14px; line-height:1.6}
+    }
+
+    @media (max-width: 480px) {
+      p.lead{font-size:13px; line-height:1.5}
+    }
+
+    .actions{
+      display:flex; gap:10px; flex-wrap:wrap;
+      margin-top:15px;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:8px;
+      padding:10px 14px; border-radius:12px;
+      border:1px solid rgba(11,31,59,.12);
+      background: linear-gradient(90deg,rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+      font-weight:900;
+      font-size: 14px;
+    }
+    
+    .btn-facebook{
+      display:inline-flex; align-items:center; justify-content:center; gap:8px;
+      padding:10px 14px; border-radius:12px;
+      border:1px solid rgba(11,31,59,.12);
+      color: var(--white);
+      background: linear-gradient(90deg,rgba(9, 9, 117, 1) 0%, rgba(0, 212, 255, 1) 100%);
+      font-weight:900;
+      font-size: 14px;
+    }
+    
+    /* تحسين الأزرار للجوال */
+    @media (max-width: 768px) {
+      .btn, .btn-facebook{
+        padding:8px 12px;
+        font-size:13px;
+        border-radius:10px;
+      }
+      .actions{gap:8px; margin-top:12px}
+    }
+
+    @media (max-width: 480px) {
+      .btn, .btn-facebook{
+        padding:7px 10px;
+        font-size:12px;
+        flex: 1;
+        min-width: 120px;
+        justify-content: center;
+      }
+      .actions{
+        gap:6px;
+        justify-content: center;
+      }
+    }
+    
+    .btn.primary{
+      background: linear-gradient(135deg, var(--navy), var(--navy2));
+      color: var(--white);
+      border-color: rgba(255,255,255,.25);
+    }
+    .btn.gold{
+      background: linear-gradient(90deg,rgba(29, 222, 106, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+      color: #1b1406;
+      border-color: rgba(11,31,59,.10);
+    }
+    .btn:hover{transform: translateY(-1px); box-shadow:0 16px 30px rgba(11,31,59,.12)}
+    .btn:active{transform: translateY(0px); box-shadow:none}
+
+    .side{
+      background: rgba(255,255,255,.72);
+      border:1px solid rgba(11,31,59,.10);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
+    .side::before{
+      content:"";
+      position:absolute; inset:0;
+      background:
+        radial-gradient(400px 180px at 80% 10%, rgba(200,162,74,.18), transparent 60%),
+        linear-gradient(180deg, rgba(11,31,59,.06), transparent 55%);
+      pointer-events:none;
+    }
+    .side .pad{position:relative; padding:10px}
+
+    .affil{
+      display:flex; gap:10px; align-items:center;
+      padding:12px 12px;
+      border-radius: 14px;
+      background: rgba(11,31,59,.06);
+      border:1px solid rgba(11,31,59,.08);
+    }
+    .affil img{width:40px;height:40px;object-fit:contain}
+    .affil b{color:var(--navy); font-size: 14px}
+    .affil div{line-height:1.3}
+    .affil small{display:block;color:var(--muted);margin-top:2px; font-size: 12px}
+
+    .grid{
+      margin-top:15px;
+      display:grid; gap:12px;
+      grid-template-columns: repeat(3,1fr);
+    }
+    
+    /* تحسين الشبكة للجوال */
+    @media (max-width: 768px){
+      .grid{grid-template-columns: repeat(2,1fr); gap:10px}
+      .affil{padding:10px; border-radius:12px}
+      .affil img{width:36px;height:36px}
+      .affil b{font-size:13px}
+      .affil small{font-size:11px}
+    }
+
+    @media (max-width: 480px){
+      .grid{grid-template-columns:1fr; gap:8px}
+    }
+
+    .mini{
+      background: rgba(255,255,255,.78);
+      border:1px solid rgba(11,31,59,.10);
+      border-radius: 14px;
+      padding:14px;
+      box-shadow: 0 12px 30px rgba(11,31,59,.08);
+      position:relative;
+      overflow:hidden;
+    }
+    .mini::before{
+      content:"";
+      position:absolute; inset:-1px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(200,162,74,.35), transparent 40%);
+      opacity:.25; pointer-events:none;
+    }
+    .mini h3{
+      margin:0 0 6px;
+      color:var(--navy);
+      font-size:14px;
+      font-weight: 900;
+    }
+    .mini p{margin:0;color:rgba(13,20,32,.78);line-height:1.6;font-size:13px}
+
+    /* تحسين الميني كارد للجوال */
+    @media (max-width: 768px) {
+      .mini{padding:12px; border-radius:12px}
+      .mini h3{font-size:13px}
+      .mini p{font-size:12px; line-height:1.5}
+    }
+
+    section{scroll-margin-top:80px}
+    .section{
+      margin-top:20px;
+      background: rgba(255,255,255,.72);
+      border:1px solid rgba(11,31,59,.10);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
+    }
+    .section::before{
+      content:"";
+      position:absolute; inset:0;
+      background:
+        repeating-linear-gradient(45deg, rgba(11,31,59,.06) 0 1px, transparent 1px 22px);
+      opacity:.16;
+      pointer-events:none;
+    }
+    .section .pad{position:relative; padding:20px}
+    .section h2{
+      margin:0 0 8px;
+      color:var(--navy);
+      font-size:20px;
+      font-weight: 900;
+    }
+    .section .sub{color:var(--muted);margin:0 0 15px;line-height:1.6; font-size: 14px}
+
+    /* تحسين الأقسام للجوال */
+    @media (max-width: 768px) {
+      .section{margin-top:15px; border-radius:16px}
+      .section .pad{padding:16px}
+      .section h2{font-size:18px}
+      .section .sub{font-size:13px; margin:0 0 12px}
+    }
+
+    @media (max-width: 480px) {
+      .section .pad{padding:14px}
+      .section h2{font-size:16px}
+      .section .sub{font-size:12px}
+    }
+
+    .two{
+      display:grid; gap:14px;
+      grid-template-columns: 1.05fr .95fr;
+      align-items:start;
+    }
+    
+    /* تحسين التخطيط المزدوج للجوال */
+    @media (max-width: 768px){ 
+      .two{grid-template-columns:1fr; gap:12px}
+    }
+
+    .list{
+      display:grid; gap:8px;
+    }
+    .item{
+      display:flex; gap:10px; align-items:flex-start;
+      padding:12px 12px;
+      background: rgba(255,255,255,.78);
+      border:1px solid rgba(11,31,59,.10);
+      border-radius: 14px;
+    }
+    .icon{
+      width:30px;height:30px;border-radius:10px;
+      display:grid; place-items:center;
+      background: rgba(200,162,74,.18);
+      border:1px solid rgba(200,162,74,.35);
+      flex:0 0 auto;
+      font-weight:900;
+      color: var(--navy);
+      font-family: var(--font-en);
+      font-size: 14px;
+    }
+    .item b{display:block;color:var(--navy);margin-bottom:2px;font-weight: 900; font-size: 14px}
+    .item span{color:rgba(13,20,32,.78);line-height:1.6; font-size: 13px}
+    .mono{font-family: var(--font-en); direction:ltr; font-size: 13px}
+
+    /* تحسين القائمة للجوال */
+    @media (max-width: 768px) {
+      .item{padding:10px; border-radius:12px}
+      .icon{width:28px;height:28px; font-size:13px; border-radius:8px}
+      .item b{font-size:13px}
+      .item span{font-size:12px; line-height:1.5}
+      .mono{font-size:12px}
+    }
+
+    .contactbox{
+      background: rgba(11,31,59,.06);
+      border:1px solid rgba(11,31,59,.10);
+      border-radius: 16px;
+      padding:16px;
+    }
+    .contactbox .row{display:flex;gap:10px;align-items:center;margin-bottom:8px;flex-wrap:wrap}
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:8px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.80);
+      border:1px solid rgba(11,31,59,.10);
+      font-weight:900;
+      font-size: 13px;
+    }
+
+    /* تحسين صندوق الاتصال للجوال */
+    @media (max-width: 768px) {
+      .contactbox{padding:14px; border-radius:14px}
+      .contactbox .row{margin-bottom:6px; gap:8px}
+      .pill{padding:7px 9px; font-size:12px; border-radius:20px}
+      .pill i{font-size:18px !important}
+    }
+
+    @media (max-width: 480px) {
+      .contactbox{padding:12px}
+      .pill{padding:6px 8px; font-size:11px}
+      .pill i{font-size:16px !important}
+    }
+
+    .qrwrap{
+      display:grid; place-items:center;
+      background: rgba(255,255,255,.85);
+      border:1px solid rgba(11,31,59,.10);
+      border-radius: 16px;
+      padding:12px;
+      max-width: 260px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    .qrwrap img{
+      width:160px;height:160px;border-radius:12px;
+      border:1px solid rgba(11,31,59,.10)
+    }
+    .note{font-size:11px;color:var(--muted);margin-top:8px;line-height:1.5;text-align:center}
+
+    /* تحسين QR للجوال */
+    @media (max-width: 768px) {
+      .qrwrap{padding:10px; border-radius:14px; max-width: 220px}
+      .qrwrap img{width:140px;height:140px; border-radius:10px}
+      .note{font-size:10px; margin-top:6px}
+    }
+
+    @media (max-width: 480px) {
+      .qrwrap{max-width: 200px}
+      .qrwrap img{width:120px;height:120px}
+    }
+
+    footer{
+      margin-top:15px;
+      color: rgba(13,20,32,.65);
+      text-align:center;
+      font-size:11px;
+      font-family: var(--font-en);
+      direction:ltr;
+    }
+
+    /* Bilingual blocks */
+    .lang-block{display:none}
+    .lang-block.active{display:block}
+    .en{font-family: var(--font-en); direction:ltr; text-align:left}
+    .ar{font-family: var(--font-ar); direction:rtl; text-align:right}
+
+    /* Institutions Grid */
+    .inst-grid{
+      display:grid;
+      gap:12px;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    
+    /* تحسين شبكة المؤسسات للجوال */
+    @media (max-width: 980px){
+      .inst-grid{grid-template-columns: repeat(2, 1fr);}
+    }
+    @media (max-width: 520px){
+      .inst-grid{grid-template-columns: 1fr; gap:10px}
+    }
+
+    .inst-card{
+      background: rgba(255,255,255,.80);
+      border: 1px solid rgba(11,31,59,.10);
+      border-radius: 16px;
+      overflow:hidden;
+      box-shadow: 0 12px 30px rgba(11,31,59,.08);
+      position:relative;
+    }
+    .inst-card::after{
+      content:"";
+      position:absolute; inset:0;
+      background: linear-gradient(135deg, rgba(200,162,74,.22), transparent 45%);
+      opacity:.18;
+      pointer-events:none;
+    }
+
+    .inst-img{
+      height:100px;
+      width:100%;
+      display:block;
+      object-fit:cover;
+      background:
+        linear-gradient(135deg, rgba(11,31,59,.22), rgba(11,31,59,.05)),
+        radial-gradient(220px 120px at 80% 15%, rgba(200,162,74,.22), transparent 60%),
+        linear-gradient(180deg, rgba(255,255,255,.0), rgba(245,247,250,1));
+      border-bottom: 1px solid rgba(11,31,59,.10);
+    }
+
+    /* تحسين صور المؤسسات للجوال */
+    @media (max-width: 768px) {
+      .inst-img{height:90px}
+      .inst-card{border-radius:14px}
+    }
+
+    @media (max-width: 480px) {
+      .inst-img{height:80px}
+    }
+
+    .inst-body{
+      padding:10px 10px 12px;
+      position:relative;
+    }
+    .inst-title{
+      margin:0;
+      color: var(--navy);
+      font-weight: 900;
+      font-size: 13px;
+      line-height: 1.4;
+    }
+    .inst-badge{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      margin-top:8px;
+      padding:5px 8px;
+      border-radius: 999px;
+      background: rgba(11,31,59,.06);
+      border: 1px solid rgba(11,31,59,.10);
+      color: rgba(13,20,32,.78);
+      font-weight: 900;
+      font-size: 11px;
+      font-family: var(--font-en);
+      direction:ltr;
+    }
+    
+    /* تحسين البادجات للجوال */
+    @media (max-width: 768px) {
+      .inst-body{padding:8px 8px 10px}
+      .inst-title{font-size:12px}
+      .inst-badge{font-size:10px; padding:4px 7px; margin-top:6px}
+    }
+
+    .pill .fa-whatsapp{
+      color: #25D366;
+      font-size: 20px;
+    }
+    
+    /* تحسين أيقونة الواتساب للجوال */
+    @media (max-width: 768px) {
+      .pill .fa-whatsapp{font-size: 18px}
+    }
+    
+    /* تحسينات إضافية للتجربة على الجوال */
+    @media (max-width: 768px) {
+      html, body {
+        -webkit-text-size-adjust: 100%;
+        -webkit-tap-highlight-color: transparent;
+      }
+      
+      /* تحسين قابلية النقر على الأجهزة المحمولة */
+      .btn, .nav a, .toggle button, .pill {
+        -webkit-tap-highlight-color: rgba(0,0,0,0.1);
+        cursor: pointer;
+      }
+      
+      /* منع التكبير على حقول الإدخال */
+      input, select, textarea {
+        font-size: 16px !important;
+      }
+      
+      /* تحسين التمرير السلس */
+      section {
+        scroll-margin-top: 60px;
+      }
+    }
+    
+    /* تحسين للأجهزة ذات الشاشات الصغيرة جداً */
+    @media (max-width: 360px) {
+      .container{padding:6px 6px 25px}
+      h1{font-size: 18px}
+      .section h2{font-size: 15px}
+      .btn, .btn-facebook{min-width: 110px; font-size:11px}
+      .pill{font-size:10px}
+    }
+	
+	/* إضافة تحسينات للصورة */
+.side img {
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 8px 25px rgba(11,31,59,.15);
+  transition: transform 0.3s ease;
+}
+
+.side img:hover {
+  transform: scale(1.02);
+}
+
+/* لجعل الصورة أكثر تفاعلية على الجوال */
+@media (max-width: 768px) {
+  .side img {
+    max-width: 80%;
+  }
+}
+	
+	
+  </style>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="inner">
+      <div class="brand">
+        <img src="https://mabarrat.org.lb/wp-content/uploads/2021/12/Al-Mabarrat-Association.png" alt="Logo" />
+        <div>
+          <div class="t1 ar">مجمع دوحة المبرّات التربوي الرعائي</div>
+          <div class="t2 en">Doha Al-Mabarrat Educational & Care Complex</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="#about" class="ar">مجالات العمل</a>
+        <a href="#services" class="ar">كُن شريكاً</a>
+        <a href="#contact" class="ar">تواصل</a>
+      </nav>
+
+      
+    </div>
+  </div>
+
+  <main class="container">
+  
+    <!-- HERO -->
+    <div class="hero">
+	<aside class="side">
+    <div class="pad">
+     <img src="https://i.postimg.cc/rscPwxLq/sayed1.jpg" style=" width:90%;
+    height:600px;
+    max-width:100%;
+    border-radius:16px;
+    align-items:center;" >   
+        </div>
+      </aside>
+      <div class="card">
+        <div class="pad">
+          <div class="lang-block active ar" id="hero-ar">
+            <span class="kicker"><span class="dot"></span> مجمع دوحة المبرّات التربوي الرعائي</span>
+            <h3>كلمة سماحة العلامة المرجع السيد محمد حسين فضل الله </h3>
+            <p class="lead" style="direction: rtl; text-align: justify; text-align-last: right;">
+			عندما فكرنا بالتحرك في سبيل أن يكون للأيتام مبرّة.. كنا نفكر بالواقع الصعب، وواقع الحرب المتحركة في دائرة الفتنة من الداخل ومواجهة التحديات في الخارج، وكنا نشعر أن الله سبحانه وتعالى حمل كلّاً منا طاقة، حمّله مسؤولية أن يضعها للآخرين الذين يحتاجونها.
+			وانطلاقاً وكانت هذه المبرّة والمبرّات الأخرى مواقع للرعاية التربوية والاجتماعية، والتي يرجع الفضل فيها لكل العاملين والعاملات والمشرفين والمشرفات، وكل الذين يديرون حركتها وينطلقون لدعمها في علاقاتهم الخاصة والعامة.
+			<p></p>
+			  <h2>مبرة الامام الخوئي</h2>
+			تُعَدّ مبرّة الإمام الخوئي باكورة العمل المؤسسي لجمعية المبرّات الخيرية في لبنان، وقد جاءت ثمرةً لرؤية إنسانية رائدة استشعرت عمق المأساة التي خلّفتها الحرب اللبنانية، ولا سيّما ما أصاب فئة الأيتام الذين فقدوا المعيل والمأوى.
+
+وانطلاقًا من الإحساس العميق بالمسؤولية الشرعية والإنسانية، وبإيعازٍ من سماحة المرجع الديني الأعلى آية الله العظمى السيد أبو القاسم الخوئي، أُسّست هذه المؤسسة لتكون ملاذًا آمنًا يحتضن الأيتام، ويوفّر لهم رعايةً متكاملة ضمن بيئة قائمة على الكرامة والاحترام.
+
+وقد شكّلت مبرّة الإمام الخوئي النواة الأولى لمسيرة جمعية المبرّات الخيرية، ورسّخت منذ انطلاقتها نهجًا تربويًا رعائيًا متكاملًا، يجمع بين الإيواء والتعليم، والتربية الأخلاقية، والتأهيل المهني، بما يهدف إلى إعداد أفرادٍ فاعلين في مجتمعهم، قادرين على بناء مستقبلهم بثقةٍ ومسؤولية.
+            </p class="lead lead-justify">
+            
+          </div>
+
+          <div class="lang-block en" id="hero-en">
+            <span class="kicker"><span class="dot"></span> Imam Al-Khoei Mabarrat</span>
+            <h1>Doha Al-Mabarrat<br/>Educational &amp; Care Complex</h1>
+            <p class="lead">
+              An educational and care institution in Lebanon providing a safe, supportive environment
+              with a dedicated focus on caring for orphans with dignity and respect.
+            </p>
+            <div class="actions">
+              <a class="btn primary" href="#contact">Get in touch</a>
+              <a class="btn gold" href="https://wa.me/message/WUKK444PPCVYM1" target="_blank" rel="noopener">WhatsApp</a>
+              <a class="btn" href="https://www.mabarrat.org.lb" target="_blank" rel="noopener">Website</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="pad">
+        <!-- Arabic About -->
+        <div class="lang-block active ar" id="about-ar">
+          <h2>مجالات العمل</h2>
+          <p class="sub">
+            <b> تعمل مبرّة الإمام الخوئي ضمن إطارٍ متكامل من المجالات التربوية والرعائية، يهدف إلى تلبية حاجات الابناء النفسية، والاجتماعية، والتعليمية، وتأهيلهم للحياة الكريمة. وتشمل مجالات عملها ما يأتي:<br/>
+           </b>
+          </p>
+          <div class="one">
+            <div class="list">
+              <div class="item">
+                <div class="icon">1</div>
+                <div>
+                  <b>الرعاية الداخلية للايتام</b>
+                  <span>توفير سكنٍ آمنٍ ومناسب يلبّي الاحتياجات الأساسية، ويؤمّن بيئة مستقرة تحفظ كرامة الابناء وأمنهم</span>
+                </div>
+              </div>
+              <div class="item">
+                <div class="icon">2</div>
+                <div>
+                  <b>الرعاية التربوية والتعليمية</b>
+                  <span>متابعة التحصيل العلمي في مختلف المراحل الدراسية، وتقديم الدعم التربوي بما يسهم في تنمية القدرات الفكرية والعلمية</span>
+                </div>
+              </div>
+              <div class="item">
+                <div class="icon">3</div>
+                <div>
+                  <b>الرعاية النفسية والاجتماعية</b>
+                  <span>الاهتمام بالصحة النفسية، وتعزيز شعورهم بالانتماء والثقة بالنفس</span>
+                </div>
+              </div>
+			  
+			   <div class="item">
+                <div class="icon">4</div>
+                <div>
+                  <b>التأهيل المهني</b>
+                  <span>إعداد الأيتام وتأهيلهم مهنيًا وفق قدراتهم وميولهم، بما يساعدهم على الاندماج في المجتمع وسوق العمل</span>
+                </div>
+              </div>
+			  
+			  
+			  <div class="item">
+                <div class="icon">5</div>
+                <div>
+                  <b>الرعاية الصحية</b>
+                  <span>تأمين المتابعة الطبية والخدمات الصحية الأساسية، حفاظًا على سلامتهم الجسدية</span>
+                </div>
+              </div>
+			  
+            </div>
+			
+            </div>
+          </div>  
+		  
+
+          <hr style="border:none;border-top:1px solid rgba(11,31,59,.10);margin:15px 0;" />
+
+          <h3 style="margin:0 0 10px;color:var(--navy);font-size:16px;font-weight:900;">
+            مشاريع بحاجة لدعم
+          </h3>
+
+          <div class="inst-grid">
+            <div class="inst-card">
+              <img class="inst-img" src="https://scontent.fbey2-2.fna.fbcdn.net/v/t39.30808-6/489334618_1129350715658188_523243141419967636_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=pDOYExVUg-MQ7kNvwH7ptR2&_nc_oc=AdmNkNyR8Jon3Yz8Rc_vD0GeRjGhE9Tbrk7MNyl_QGg7zveU3xArNYJZuMGWsUEuUdU&_nc_zt=23&_nc_ht=scontent.fbey2-2.fna&_nc_gid=af5vZH-9LcfqXq7j0jFm6w&oh=00_AfoGQb69NE95vq4_nX0NGR5YuVJCeY_vxFSu_eMAF1m78A&oe=6977D651" alt="مبرة الامام الخوئي لرعاية" onerror="this.removeAttribute('src')" />
+              <div class="inst-body">
+                <p class="inst-title">ترميم مباني المبرة التي مر عليها أكثر من 40 عاماً</p>
+                <span class="inst-badge">01</span>
+              </div>
+            </div>
+
+            <div class="inst-card">
+              <img class="inst-img" src="https://i.postimg.cc/WbdMJtbd/Whats-App-Image-2026-01-09-at-4-14-41-PM.jpg" alt="مبرة النبي يوسف" onerror="this.removeAttribute('src')" />
+              <div class="inst-body">
+                <p class="inst-title">استحداث قاعة رياضية</p>
+                <span class="inst-badge">02</span>
+              </div>
+            </div>
+
+            <div class="inst-card">
+              <img class="inst-img" src="https://i.postimg.cc/bJYnYwB8/hdant-(1).png" alt="ثانوية الأبرار" onerror="this.removeAttribute('src')" />
+              <div class="inst-body">
+                <p class="inst-title">أنشاء حضانة دامجة</p>
+                <span class="inst-badge">03</span>
+              </div>
+            </div>
+
+            <div class="inst-card">
+              <img class="inst-img" src="https://i.postimg.cc/LXSTtSQc/Chat-GPT-Image-Feb-3-2026-11-34-28-AM.png" alt="معهد علي الاكبر المهني و التقني" onerror="this.removeAttribute('src')" />
+              <div class="inst-body">
+                <p class="inst-title">استحداث مسبح خاص للابناء</p>
+                <span class="inst-badge">04</span>
+              </div>
+            </div>
+
+       
+            </div>
+          </div>
+        </div>
+
+
+    <!-- SERVICES -->
+    <section id="services" class="section">
+      <div class="pad">
+        <div class="lang-block active ar" id="services-ar">
+          <h2>مـعـاً نـصـنـع الأثـر</h2>
+          <p class="sub">دعوة للدعم</p>
+          <div class="list">
+            <div class="item"><div class="icon">✓</div><div><b>دعـم</b><span>بدعمكم نؤمّن بيئة آمنة تلبّي احتياجات الأطفال وتفتح أمامهم آفاق النمو. </span></div></div>
+            <div class="item"><div class="icon">✓</div><div><b>شـراكـة</b><span>بشراكتكم نطوّر مشاريع دامجة ومستدامة تخدم المجتمع بأكمله. </span></div></div>
+            <div class="item"><div class="icon">✓</div><div><b>مـسـاهـمـة</b><span>بمساهمتكم نضمن استمرارية العمل الإنساني وتحويل الاحتياجات إلى فرص حقيقية.</span></div></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="pad">
+        <div class="lang-block active ar" id="contact-ar">
+          <h2>تواصل معنا</h2>
+          <p class="sub">للاستفسارات والتواصل، يمكنك استخدام المعلومات التالية أو واتساب عبر الـQR.</p>
+          <div class="two">
+            <div class="contactbox">
+              <div class="row"><span class="pill">📞 الهاتف: <span class="mono">+961 5 800 570</span></span></div>
+              <div class="row"><span class="pill"><i class="fa-brands fa-whatsapp"></i> واتس اب: <span class="mono">+961 71 994 135</span></span></div>		 
+              <div class="row"><span class="pill">💸 تبرع عبر <font color=red>Whish</font> : <span class="mono">+961 71 907 674</span></span></div>
+              <div class="row"><span class="pill">✉️ البريد الإلكتروني: <span class="mono">alkhouie@mabarrat.org.lb</span></span></div>
+              <div class="row"><span class="pill">🌐 الموقع الإلكتروني: <span class="mono">www.mabarrat.org.lb</span></span></div>
+              <div class="row"><span class="pill">📍 العنوان: دوحة الحص، مفرق الكسارات</span></div>
+              <div class="actions">
+              <a class="btn primary" href="#contact">تواصل معنا</a>
+              <a class="btn gold" href="https://wa.me/message/WUKK444PPCVYM1" target="_blank" rel="noopener">Whatsapp</a>			  
+              <a class="btn-facebook" href="https://www.facebook.com/mabaratalkhouie" target="_blank" rel="noopener">FaceBook</a>
+			  <a class="btn" href="https://www.instagram.com/mabaratalkhouie/" target="_blank" rel="noopener">Instagram</a>
+			  <a class="btn" href="https://www.mabarrat.org.lb" target="_blank" rel="noopener">الموقع الإلكتروني</a>
+            </div>
+            </div>
+
+            <div class="qrwrap">
+              <img id="qr" alt="WhatsApp QR" />
+              <div class="note" id="qr-note">إذا لم يظهر الـQR، تأكد من وجود إنترنت (أو ضع صورة QR محلية بدلًا منه).</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lang-block en" id="contact-en">
+          <h2>Contact</h2>
+          <p class="sub">For inquiries, use the details below or scan the QR to open WhatsApp.</p>
+          <div class="two">
+            <div class="contactbox">
+              <div class="row"><span class="pill">📞 Phone: <span class="mono">+961 5 800 570</span></span></div>
+              <div class="row">
+                <span class="pill">
+                  <i class="fas fa-donate" style="color: #e74c3c;"></i>
+                  WishNo: <span class="mono">+961 71907674</span>
+                </span>
+              </div>
+              <div class="row"><span class="pill">✉️ Email: <span class="mono">alkhouie@mabarrat.org.lb</span></span></div>
+              <div class="row"><span class="pill">🌐 Website: <span class="mono">www.mabarrat.org.lb</span></span></div>
+              <div class="row"><span class="pill">📍 Address: Doha Al-Hoss, Al-Kassarat Junction, Lebanon</span></div>
+              <div class="actions" style="margin-top:12px">
+                <a class="btn primary" href="mailto:alkhouie@mabarrat.org.lb">Email us</a>
+                <a class="btn gold" href="https://wa.me/message/WUKK444PPCVYM1" target="_blank" rel="noopener">WhatsApp</a>
+              </div>
+            </div>
+
+            <div class="qrwrap">
+              <img id="qr2" alt="WhatsApp QR" />
+              <div class="note" id="qr-note2">If the QR doesn't show, you may be offline—replace it with a local QR image.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAP SECTION -->
+    <section id="map" class="section">
+      <div class="pad">
+        <div class="lang-block active ar" id="map-ar">
+          <h2>📍 موقع المؤسسة</h2>
+          <p class="sub">خريطة الوصول إلى مبرة الامام الخوئي قده</p>
+          
+          <div class="map-container" style="margin-top: 20px;">
+            <!-- خريطة جوجل التفاعلية -->
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3319.5104479807583!2d35.467166376418384!3d33.7641772365058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDQ1JzUxLjAiTiAzNcKwMjgnMDEuOCJF!5e0!3m2!1sen!2slb!4v1740612200000!5m2!1sen!2slb" 
+              width="100%" 
+              height="400" 
+              style="border: 1px solid rgba(11,31,59,.15); border-radius: 16px; box-shadow: 0 12px 30px rgba(11,31,59,.1);" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            
+            <!-- روابط بديلة -->
+            <div style="margin-top: 20px; display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;">
+              <a href="https://maps.app.goo.gl/jVfvmENKxdeAe3Tb6?g_st=aw" 
+                 target="_blank" 
+                 class="btn gold" 
+                 style="display: inline-flex; align-items: center; gap: 8px;">
+                <i class="fas fa-map-marker-alt"></i>
+                فتح في تطبيق الخرائط
+              </a>
+              
+              <a href="https://maps.app.goo.gl/jVfvmENKxdeAe3Tb6?g_st=aw" 
+                 target="_blank" 
+                 class="btn" 
+                 style="display: inline-flex; align-items: center; gap: 8px;">
+                <i class="fas fa-directions"></i>
+                احصل على اتجاهات
+              </a>
+            </div>
+            
+            <!-- معلومات الموقع -->
+            <div class="contactbox" style="margin-top: 25px;">
+              <h3 style="margin: 0 0 15px; color: var(--navy); font-size: 16px; font-weight: 900;">
+                <i class="fas fa-info-circle" style="color: var(--gold); margin-left: 8px;"></i>
+                معلومات الوصول
+              </h3>
+              
+              <div class="row" style="margin-bottom: 12px;">
+                <span class="pill">
+                  <i class="fas fa-map-pin" style="color: #e74c3c;"></i>
+العنوان: خلدة - دوحة الحص، مفرق الكسارات
+                </span>
+              </div>
+              
+              <div class="row" style="margin-bottom: 12px;">
+                <span class="pill">
+                  <i class="fas fa-coordinates" style="color: var(--navy);"></i>
+                  الإحداثيات: 
+                  <span class="mono" style="margin-right: 5px;">33.733086° N</span>, 
+                  <span class="mono">35.574642° E</span>
+                </span>
+              </div>
+              
+              <div class="row">
+                <span class="pill">
+                  <i class="fas fa-car" style="color: #3498db;"></i>
+                  موقف سيارات: متوفر داخل المجمع
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lang-block en" id="map-en">
+          <h2>📍 Location</h2>
+          <p class="sub">Access map to Doha Al-Mabarrat Educational & Care Complex in Doha Al-Hoss, Al-Kassarat Junction</p>
+          
+          <div class="map-container" style="margin-top: 20px;">
+            <!-- Interactive Google Map -->
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3318.196212200193!2d35.571466776418884!3d33.73308603633348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151f1e4b2c4d7a8b%3A0x8d78e64880aac616!2sDoha%20Al-Mabarrat%20Educational%20%26%20Care%20Complex!5e0!3m2!1sen!2slb!4v1738576844816!5m2!1sen!2slb" 
+              width="100%" 
+              height="400" 
+              style="border: 1px solid rgba(11,31,59,.15); border-radius: 16px; box-shadow: 0 12px 30px rgba(11,31,59,.1);" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            
+            <!-- Alternative Links -->
+            <div style="margin-top: 20px; display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;">
+              <a href="https://maps.app.goo.gl/jVfvmENKxdeAe3Tb6?g_st=aw" 
+                 target="_blank" 
+                 class="btn gold" 
+                 style="display: inline-flex; align-items: center; gap: 8px;">
+                <i class="fas fa-map-marker-alt"></i>
+                Open in Maps App
+              </a>
+              
+              <a href="https://maps.google.com/?q=33.733086,35.574642" 
+                 target="_blank" 
+                 class="btn" 
+                 style="display: inline-flex; align-items: center; gap: 8px;">
+                <i class="fas fa-directions"></i>
+                Get Directions
+              </a>
+            </div>
+            
+            <!-- Location Info -->
+            <div class="contactbox" style="margin-top: 25px;">
+              <h3 style="margin: 0 0 15px; color: var(--navy); font-size: 16px; font-weight: 900;">
+                <i class="fas fa-info-circle" style="color: var(--gold); margin-left: 8px;"></i>
+                Access Information
+              </h3>
+              
+              <div class="row" style="margin-bottom: 12px;">
+                <span class="pill">
+                  <i class="fas fa-map-pin" style="color: #e74c3c;"></i>
+                  Address: Doha Al-Hoss, Al-Kassarat Junction, West Bekaa
+                </span>
+              </div>
+              
+              <div class="row" style="margin-bottom: 12px;">
+                <span class="pill">
+                  <i class="fas fa-coordinates" style="color: var(--navy);"></i>
+                  Coordinates: 
+                  <span class="mono" style="margin-right: 5px;">33.733086° N</span>, 
+                  <span class="mono">35.574642° E</span>
+                </span>
+              </div>
+              
+              <div class="row">
+                <span class="pill">
+                  <i class="fas fa-car" style="color: #3498db;"></i>
+                  Parking: Available inside the complex
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <footer>
+      © <span id="y"></span> Doha Al-Mabarrat Educational & Care Complex · All rights reserved
+    </footer>
+  </main>
+
+  <script>
+    const WA_LINK = "https://wa.me/message/WUKK444PPCVYM1";
+
+    // Online QR generator (works when internet is available).
+    // For offline QR: replace with local file e.g. qr-whatsapp.png
+    function setQR(imgEl){
+      if(!imgEl) return;
+      const url = "https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=" + encodeURIComponent(WA_LINK);
+      imgEl.src = url;
+      imgEl.onerror = () => {
+        imgEl.removeAttribute("src");
+      };
+    }
+
+    // Language toggle
+    const btnAr = document.getElementById("btn-ar");
+    const btnEn = document.getElementById("btn-en");
+
+    function setLang(lang){
+      const isAr = (lang === "ar");
+      document.documentElement.lang = isAr ? "ar" : "en";
+      document.documentElement.dir  = isAr ? "rtl" : "ltr";
+      document.body.style.fontFamily = isAr
+        ? getComputedStyle(document.documentElement).getPropertyValue("--font-ar")
+        : getComputedStyle(document.documentElement).getPropertyValue("--font-en");
+
+      // nav visibility
+      document.querySelectorAll(".nav .ar").forEach(el => el.style.display = isAr ? "" : "none");
+      document.querySelectorAll(".nav .en").forEach(el => el.style.display = isAr ? "none" : "");
+
+      // blocks visibility
+      document.querySelectorAll(".lang-block").forEach(el => el.classList.remove("active"));
+      document.querySelectorAll(isAr ? ".lang-block.ar" : ".lang-block.en").forEach(el => el.classList.add("active"));
+
+      btnAr.classList.toggle("active", isAr);
+      btnEn.classList.toggle("active", !isAr);
+      
+      // إعادة حساب الأبعاد بعد تغيير اللغة
+      setTimeout(() => {
+        window.dispatchEvent(new Event('resize'));
+      }, 100);
+    }
+
+    // mark blocks
+    document.querySelectorAll("#hero-ar,#affil-ar,#m1-ar,#m1p-ar,#m2-ar,#m2p-ar,#m3-ar,#m3p-ar,#about-ar,#services-ar,#contact-ar")
+      .forEach(el => el.classList.add("ar"));
+    document.querySelectorAll("#hero-en,#affil-en,#m1-en,#m1p-en,#m2-en,#m2p-en,#m3-en,#m3p-en,#about-en,#services-en,#contact-en")
+      .forEach(el => el.classList.add("en"));
+
+    // init
+    document.getElementById("y").textContent = new Date().getFullYear();
+    setQR(document.getElementById("qr"));
+    setQR(document.getElementById("qr2"));
+    setLang("ar");
+
+    btnAr.addEventListener("click", () => setLang("ar"));
+    btnEn.addEventListener("click", () => setLang("en"));
+    
+    // تحسين الأداء على الجوال
+    document.addEventListener('DOMContentLoaded', function() {
+      // منع التكبير المزدوج على الجوال
+      let lastTouchEnd = 0;
+      document.addEventListener('touchend', function(event) {
+        const now = (new Date()).getTime();
+        if (now - lastTouchEnd <= 300) {
+          event.preventDefault();
+        }
+        lastTouchEnd = now;
+      }, false);
+      
+      // تحسين الأداء للصور
+      const images = document.querySelectorAll('img');
+      images.forEach(img => {
+        img.loading = 'lazy';
+      });
+    });
+  </script>
+</body>
+</html>
